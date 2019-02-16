@@ -1,7 +1,7 @@
 {
   "name": "node_mongo_postman",
   "version": "1.0.0",
-  "description": "CURD with MongoDB and Express JS",
+  "description": "CRUD with MongoDB and Express JS",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -16,7 +16,7 @@
     "crud",
     "mongodb"
   ],
-  "author": "prashanthteja",
+  "author": "nikhil",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ip11/node_mongo_postman/issues"
