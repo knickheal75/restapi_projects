@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 var db = require('./dbconnect');
 var User = require('./models/user');
-
+const port=process.env.PORT || 8080;
 
 var app = express();
 
@@ -96,7 +96,7 @@ app.post('/:id',function(req,res){
 
 
 
-app.listen(8080,function(err){
+app.listen(port,function(err){
     if(err){
         throw err;
     }
