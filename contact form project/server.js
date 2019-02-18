@@ -100,5 +100,5 @@ app.listen(port,function(err){
     if(err){
         throw err;
     }
-    console.log("Server is Running at 8080 port!")
+    console.log("Server is Running at ${port}");
 });
