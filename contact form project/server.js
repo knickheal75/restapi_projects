@@ -24,7 +24,7 @@ app.post('/',function(req,res){
         if(err){
             throw err;
         }
-        res.json({"Status":"Success"});
+        res.json({"Status":" Success"});
     });
 });
 
