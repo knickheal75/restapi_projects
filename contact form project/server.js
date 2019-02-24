@@ -46,7 +46,7 @@ app.delete('/:id',function(req,res){
         if(err){
             throw err;
         }
-        res.json({"Status":"Successfully Deleted"});
+        res.json({"Status":" Successfully Deleted"});
     });
 });
 
