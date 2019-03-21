@@ -1,14 +1,19 @@
 const express = require('express');
+var app = express();
+
+const path=require("path");
+
 const bodyParser = require('body-parser');
 
 var db = require('./dbconnect');
 var User = require('./models/user');
 const port=process.env.PORT || 8080;
 
-var app = express();
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
+
 app.use("/",express.static(__dirname+"/main"));
 //inserting data
 app.post('/',function(req,res){
@@ -24,7 +29,7 @@ app.post('/',function(req,res){
         if(err){
             throw err;
         }
-        res.json({"Status":" Success"});
+        res.sendFile(path.join(__dirname,"/main","ty.html"))
     });
 });
 
