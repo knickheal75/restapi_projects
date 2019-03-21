@@ -23,7 +23,7 @@ app.post("/",function(req,res){
         b:req.body.b
 
     }//creating object for model
-    const sendtodb=new addModel(value)        //passing object to model
+    const sendtodb=new addModel(value)         //passing object to model
     sendtodb.save();
     //save to new object 
     //res.send(`inputs ${req.body.a},${req.body.b} are stored in database`);
