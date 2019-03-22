@@ -10,6 +10,7 @@ app.set('views',path.join(__dirname,"views/"))
 app.set("view engine","jade")
 
 
+//including bodyparser
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
 
