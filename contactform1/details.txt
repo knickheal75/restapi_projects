@@ -1,0 +1,17 @@
+basic contact form with post method
+
+form route and method important
+
+parsing request body and saving it to user object
+
+handling all errors
+
+app.use(express.static(__dirname+"/views")); in order to include css and addons
+
+requiring path and dbconnect
+
+exporting proper modules and requiring them
+
+res.send(user) or res.json({"status":"success"}) or res.sendFile(path.join(__dirname,"/main","ty.html")) for thankyou page
+
+
