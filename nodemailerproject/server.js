@@ -6,7 +6,7 @@ const User=require("./models/user");
 require("path");
 const port=process.env.PORT||3000;
 const nodemailer=require("nodemailer");
-const Email="nikhielmiend@gmail.com"
+const Email="blitzkrieg0705@gmail.com"
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -21,6 +21,8 @@ app.post("/",function(req,res){
     user.phone=req.body.phone;
     user.message=req.body.message;
     
+   
+    
     //NODEMAILER DOCUMENTTION START
     
 let transporter = nodemailer.createTransport({
@@ -29,13 +31,13 @@ let transporter = nodemailer.createTransport({
         secure: true, // true for 465, false for other ports
         auth: {
           user: Email, // check top
-          pass: "" //ENTER THE PASSWORD HERE
+          pass: "positron0705" //ENTER THE PASSWORD HERE
         }
       });
 
 let mailOptions = {
         from: `"Nikhil Mind" <${Email}>`, // sender address
-        to: "nikhielmiend@gmail.com, `${req.body.email}`", // list of receivers
+        to: "blitzkrieg0705@gmail.com, `${req.body.email}`", // list of receivers
         subject: "contact info", // Subject line
         text: "How are you", // plain text body
         html: `<b>Contact Information </b> <hr> <h2>name:` + req.body.name+`<hr>phone:`+req.body.phone+`<hr>email:`+req.body.email+
@@ -49,11 +51,13 @@ let mailOptions = {
         console.log('message sent: %s', info.messageId);
     })
     
-    //NODEMAILER DOCUMENTTION END
-    
-          res.sendFile(__dirname+'/views/thanks.html');
+    user.save(function(err){
+      if(err){
+          throw err;
+      } res.send(user);
+  })
   
-  
+
   })
 
 
