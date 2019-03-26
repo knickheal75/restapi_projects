@@ -1,0 +1,15 @@
+exporting the modules
+
+naming of fiels in model and req.body
+
+sending file using res.sendFile(path.join(__dirname,"/main","ty.html"))
+
+sending file response in json using res.send(user)
+
+express.static to include external CSS
+
+including template literal using backtick
+
+
+
+ 
