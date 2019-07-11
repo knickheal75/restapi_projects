@@ -57,6 +57,12 @@ app.get("/bad", (req, res) => {
     errorMessage: "unable to handle request"
   });
 });
+
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "projects page"
+  });
+});
 app.listen(port, () => {
   console.log(`server is running at port ${port}`);
 });
