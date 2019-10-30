@@ -15,6 +15,6 @@
     "dbconnect": "^0.3.2",
     "express": "^4.16.4",
     "jade": "^1.11.0",
-    "mongoose": "^5.4.19"
+    "mongoose": "^5.7.5"
   }
 }
