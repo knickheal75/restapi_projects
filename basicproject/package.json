@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ip11/node_mongo_postman",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "mongoose": "^5.4.12"
   }
 }
